@@ -1,0 +1,29 @@
+body {
+	background-color: lightgrey;
+}
+
+#char1, #char2, #char3, #char4 {
+	width: 100px;
+	height: 100px;
+	display: inline-block;
+}
+
+.char {
+
+}
+
+#char1 {
+	background-color: red;
+}
+
+#char2 {
+	background-color: blue;
+}
+
+#char3 {
+	background-color: green;
+}
+
+#char4 {
+	background-color: orange;
+}

@@ -1,0 +1,63 @@
+** RPG Game **
+
+VARIABLES:
+- Four characters are onscreen in a row
+	* Four square divs
+
+- Each character is assigned three attributes: Health Points, Attack Power, Counter Attack Power
+	* Create an Object called Character
+	* Create nested Object for each character
+
+- Enemies have only Attack Power and Counter Attack Power
+
+- Your HP is increased upon each hit
+	* var HP and var yourNewHP
+
+
+FUNCTIONS:
+- Clicking a character makes that character the Hero
+- When clicked the Hero character moves to a different part of the screen
+	* On click div, move to Your Character section
+
+- The remainder characters become Enemies
+- The Enemies move to an area below the Hero
+- Click an enemy to choose the first character to fight
+	* On click, change color and move to Defender section
+
+- Attack using the Attack button
+	* Create attack button beneath your character
+
+- Clicking an "Attack" button reduces you HP by your enemy's Counter Attack amount
+	* On click, your HP - Enemy CA amount
+
+- Clicking an "Attack" button reduces Enemy's HP by your Attack amount
+	* On click, Enemy HP reduced by your Attack amount
+
+- Each time the Attack button is clisked, your Attack amount increases by original amount
+	* On click, your Attack amount = HP + yourNewHP
+
+- With each attack, the HP count printed onscreen is reduced
+	* getObjectByID .text()
+
+- With each attack, the amount of Attack and Counter Attack are printed onscreen
+	* getObjectByID .text()
+
+- When Enemy's HP are reduced to 0, then the character is removed
+	* If Enemy HP = 0, then .remove()
+
+- If the user presses "Attack" button without selecting a new character, then print "Select new fighter"
+	* On click, .text()
+
+- If one Enemy is defeated, then select a new Enemy to start again
+	* On click, change color and move to Defender section
+
+- When Hero's HP is reduced to 0, then you lose
+	* If Hero HP = 0, then .remove()
+
+- When Hero loses, display "Restart" button to start the game again
+	* jquery add()
+
+
+1. Any tips on pseudocoding / mapping the projects? One of the *many* things I struggle with is grasping what order to write my code and link blocks together. (Maybe once our homework is due, we can pseudocode it?)
+
+2. 
