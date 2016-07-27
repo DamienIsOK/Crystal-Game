@@ -1,93 +1,92 @@
 $(document).ready(function(){
 
-	// var gem1, gem2, gem3, gem4;
-
-	// function randomize() {
-	// 	var randomization = Math.floor(Math.random() * 12) + 1;
-	// 	return randomization;
-	// }
-
-	// gem1 = randomize();
-	// gem2 = randomize();
-	// gem3 = randomize();
-	// gem4 = randomize();
+// Variables
 
 var gem1, gem2, gem3, gem4, randomNumber, userTotal;
 var wins = 0;
 var losses = 0;
 
-start();
 
-function start(){
+// Start from here
+
+startHere();
+
+function startHere(){
+	userTotal = 0;
 	gem1 = Math.floor(Math.random() * 12) + 1;
 	gem2 = Math.floor(Math.random() * 12) + 1;
 	gem3 = Math.floor(Math.random() * 12) + 1;
 	gem4 = Math.floor(Math.random() * 12) + 1;
-	randomNumber = Math.floor(Math.random() * 101) + 19;
-	userTotal = 0;
+	randomNumber = Math.floor(Math.random() * 120) + 19;
 
-	console.log('#1 ' + gem1);
-	console.log('#2 ' + gem2);
-	console.log('#3 ' + gem3);
-	console.log('#4 ' + gem4);
-	console.log('WINS: ' + wins + ' LOSSES: ' + losses);
-	console.log('Match the number: ' + randomNumber);
+	$('#match').html('<h2>Match This</h2>' + '<p>' + randomNumber + '</p>');
+	$('#wins').html('<h2>Wins</h2>' + '<p>' + wins + '</p>');
+	$('#losses').html('<h2>Losses</h2>' + '<p>' + losses + '</p>');
 
 }	
 
-	$(".gem1").click(function(){
+// Click on an item to increment and decrement #, and determine if win or lose
+
+	$("#gem1").click(function(){
 		userTotal += gem1;
-		console.log(userTotal);
+		$('#total').html('<h2>Your Total</h2>' + '<p>' + userTotal + '</p>');
+		$('#total').css('color', 'black');
 			if (userTotal === randomNumber) {
-				console.log('You win');
+				$('#total').css('color', 'green').effect('shake');
+				$('#total');
 				wins++;
-				start();
+				startHere();
 			} else if (userTotal > randomNumber) {
-				console.log('You lose');
 				losses++;
-				start();
+				$('#total').css('color', 'red').effect('shake');
+				$('#total');
+				startHere();
 			} 
 	});
 
-	$(".gem2").click(function(){
+	$("#gem2").click(function(){
 		userTotal += gem2;
-		console.log(userTotal);
+		$('#total').html('<h2>Your Total</h2>' + '<p>' + userTotal + '</p>');
+		$('#total').css('color', 'black');
 			if (userTotal === randomNumber) {
-				console.log('You win');
+				$('#total').css('color', 'green').effect('shake');
 				wins++;
-				start();
+				startHere();
 			} else if (userTotal > randomNumber) {
-				console.log('You lose');
 				losses++;
-				start();
+				$('#total').css('color', 'red').effect('shake');
+				startHere();
+
 			} 
 	});
 
-	$(".gem3").click(function(){
+	$("#gem3").click(function(){
 		userTotal += gem3;
-		console.log(userTotal);		
+		$('#total').html('<h2>Your Total</h2>' + '<p>' + userTotal + '</p>');
+		$('#total').css('color', 'black');		
 			if (userTotal === randomNumber) {
-				console.log('You win');
+				$('#total').css('color', 'green').effect('shake');
 				wins++;
-				start();
+				startHere();
 			} else if (userTotal > randomNumber) {
-				console.log('You lose');
 				losses++;
-				start();
+				$('#total').css('color', 'red').effect('shake');
+				startHere();
 			} 
 	});
 
-	$(".gem4").click(function(){
+	$("#gem4").click(function(){
 		userTotal += gem4;
-		console.log(userTotal);		
+		$('#total').html('<h2>Your Total</h2>' + '<p>' + userTotal + '</p>');
+		$('#total').css('color', 'black');
 			if (userTotal === randomNumber) {
-				console.log('You win');
+				$('#total').css('color', 'green').effect('shake');
 				wins++;
-				start();
+				startHere();
 			} else if (userTotal > randomNumber) {
-				console.log('You lose');
 				losses++;
-				start();
+				$('#total').css('color', 'red').effect('shake');
+				startHere();
 			} 
 	});
 

@@ -1,49 +1,80 @@
 body {
-  background-color: lightblue;
+  background: url('../images/background-2.png') repeat center center;
 }
 
-#main {
+header {
+  font-family: 'Pacifico', cursive;
+  color: #FFA400;
+  text-align: center;
+  font-size: 50px;
+  margin: 20px auto 40px auto;
+}
+
+img {
+  width: 150px;
+}
+
+#gem-container {
+  width: 625px;
+  margin: 0px auto;
+}
+
+#main-bg {
+  background-color: #EAF9FF;
+  height: 200px;
+  padding-top: 30px;
+}
+
+aside {
   /*border: 1px solid red;*/
+  width: 315px;
+  margin: 10px auto;
 }
 
-#title {
-  margin: 0 auto;
-  width: 300px;
+
+#match, #total, #losses, #wins {
+  width: 90px;
+  height: 80px;
+  padding-top: 10px;
+  border-radius: 3px;
+  font-family: 'Helvetica', sans-serif;
+  text-align: center;
 }
 
-#logo {
-  width: 300px;
+#match p, #total p, #losses p, #wins p {
+  font-size: 50px;
+}
+
+#match {
+  background-color: #EFEFEF;
+  margin: 0px auto;
+}
+
+
+#total {
+  background-color: #EFEFEF;
+  margin: 105px auto 5px auto;
+}
+
+#wins {
+  background-color: #C9D2D6;
+  float: left;
+}
+
+#losses {
+  background-color: #C9D2D6;
+  float: right;
+}
+
+#instructions h2 {
+  font-weight: bold;
 }
 
 #instructions {
-  margin-left: auto;
-  margin-right: auto;
-  width: 300px;
+  margin: 20px auto;
+  width: 325px;
+  line-height: 1.25;
   font-family: 'Helvetica', sans-serif;
-  font-weight: bold;
-  color: darkblue;
+  color: #FFA400;
   text-align: center;
-
-}
-
-#dashedBox {
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 30px;
-  font-family: 'Helvetica', sans-serif;
-  color: red;
-  font-weight: bolder;
-  width: 300px;
-  text-align: center;
-  margin-bottom: 20px;
-  }
-
-#game, #guessedLetters, #guessCount {
-  margin-left: auto;
-  margin-right: auto;
-  width: 300px;
-  font-family: 'Helvetica', sans-serif;
-  color: darkred;
-  text-align: center;
-
 }
